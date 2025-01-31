@@ -1,14 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import style from "./Header.module.css";
+import { Dogs } from "../assets/dogs.tsx";
 
 export const Header = () => {
   return (
-    <div className={style.header}>
-      <nav className="container">
-        <Link to="/">Home</Link>
-        <Link to="/login">Login / Criar</Link>
+    <header className={style.header}>
+      <nav className={`${style.nav} container`}>
+        <Link className={style.logo} to="/" aria-label="Dogs - Home">
+          <Dogs />
+        </Link>
+        <Link className={style.login} to="/login">
+          Login / Criar
+        </Link>
       </nav>
-    </div>
+    </header>
   );
 };
