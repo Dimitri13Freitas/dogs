@@ -22,7 +22,6 @@ export const useForm = (type) => {
       return false;
     } else {
       setError(null);
-
       return true;
     }
   }
