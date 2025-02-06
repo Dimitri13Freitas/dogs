@@ -5,7 +5,7 @@ import { Dogs } from "../assets/dogs.tsx";
 import { UserContext } from "../context/UserContext.jsx";
 
 export const Header = () => {
-  const { data, userLogout } = React.useContext(UserContext);
+  const { data } = React.useContext(UserContext);
 
   return (
     <header className={style.header}>
@@ -16,7 +16,6 @@ export const Header = () => {
         {data ? (
           <Link className={style.login} to="/conta">
             {data.nome}
-            <button onClick={userLogout}>sair</button>
           </Link>
         ) : (
           <Link className={style.login} to="/login">
