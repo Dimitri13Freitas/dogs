@@ -7,8 +7,6 @@ export const UserHeader = () => {
 
   const location = useLocation();
 
-  console.log(location);
-
   React.useEffect(() => {
     const { pathname } = location;
     switch (pathname) {
