@@ -23,10 +23,10 @@ export const UserPhotoPost = () => {
   function handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
-    form.append("img", img.raw);
-    form.append("nome", nome.value);
-    form.append("peso", peso.value);
-    form.append("idade", idade.value);
+    formData.append("img", img.raw);
+    formData.append("nome", nome.value);
+    formData.append("peso", peso.value);
+    formData.append("idade", idade.value);
 
     const token = localStorage.getItem("tk");
     const { url, options } = PHOTO_POST(token, formData);

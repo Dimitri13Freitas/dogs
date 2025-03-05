@@ -8,7 +8,6 @@ import "./App.css";
 import { UserStorage } from "./context/UserContext";
 import { User } from "./routes/User";
 import { ProtectedRoute } from "./helper/ProtectedRoute";
-
 const App = () => {
   return (
     <div>
@@ -16,7 +15,14 @@ const App = () => {
         <UserStorage>
           <Header />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route
+              path="/"
+              element={
+                <ProtectedRoute>
+                  <Home />
+                </ProtectedRoute>
+              }
+            />
             <Route path="/login/*" element={<Login />} />
             <Route
               path="conta/*"

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import style from "./Header.module.css";
-import { Dogs } from "../assets/dogs.tsx";
+import { Dogs } from "../assets/dogs.jsx";
 import { UserContext } from "../context/UserContext.jsx";
 
 export const Header = () => {
