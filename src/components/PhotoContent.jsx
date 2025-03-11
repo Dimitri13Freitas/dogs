@@ -13,7 +13,7 @@ export const PhotoContent = ({ data }) => {
     <div className={styles.photo}>
       <div className={styles.img}>
         <Image src={photo.src} alt={photo.title} />
-        <img src={photo.src} alt={photo.title} />
+        {/* <img src={photo.src} alt={photo.title} /> */}
       </div>
       <div className={styles.details}>
         <div>
