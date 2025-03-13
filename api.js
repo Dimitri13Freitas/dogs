@@ -9,6 +9,7 @@ export function TOKEN_POST(body) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(body),
+      mode: "cors",
     },
   };
 }
@@ -21,6 +22,7 @@ export function TOKEN_VALIDATE_POST(token) {
       headers: {
         Authorization: "Bearer " + token,
       },
+      mode: "cors",
     },
   };
 }
