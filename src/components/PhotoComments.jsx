@@ -14,7 +14,10 @@ export const PhotoComments = (props) => {
 
   return (
     <>
-      <ul ref={commentsSection} className={styles.comments}>
+      <ul
+        ref={commentsSection}
+        className={`${styles.comments} ${props.single ? styles.single : ""}`}
+      >
         {comments.map((e, i) => (
           <li key={i}>
             <b>{e.comment_author}: </b>
@@ -22,7 +25,13 @@ export const PhotoComments = (props) => {
           </li>
         ))}
       </ul>
-      {login && <PhotoCommentsForm setComments={setComments} id={props.id} />}
+      {login && (
+        <PhotoCommentsForm
+          single={props.single}
+          setComments={setComments}
+          id={props.id}
+        />
+      )}
     </>
   );
 };
