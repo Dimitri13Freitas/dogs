@@ -1,12 +1,12 @@
 import React from "react";
 import { Feed } from "./Feed";
-import { Loading } from "../helper/Loading";
+import { Head } from "../helper/Head";
 
 export const Home = () => {
   return (
     <section className="container mainContainer">
+      <Head title="Fotos" description="Home do Site " />
       <Feed />
-      {/* <Loading /> */}
     </section>
   );
 };

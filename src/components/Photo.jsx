@@ -5,6 +5,7 @@ import { useFetch } from "../hooks/useFetch";
 import { PHOTO } from "../../api";
 import { Loading } from "../helper/Loading";
 import { PhotoContent } from "./PhotoContent";
+import { Head } from "../helper/Head";
 
 export const Photo = () => {
   const { data, loading, error, request } = useFetch();
@@ -20,6 +21,7 @@ export const Photo = () => {
   if (data)
     return (
       <section className="container mainContainer">
+        <Head title={data.photo.title} />
         <PhotoContent single={true} data={data} />
       </section>
     );
